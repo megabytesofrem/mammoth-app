@@ -1,2 +1,2 @@
 # mammoth-app
-Open source Mastadon client written in Electron. 🐘
+Open source Mastodon client written in Electron. 🐘
