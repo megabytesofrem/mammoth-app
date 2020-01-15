@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import 'login.css';
+
+:root {
+  --header-bg: #202f42;
+  --app-bg: #354d6d;
+  --app-fg: #ffffff;
+  --button-bg: #4f74a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+
+  background-color: var(--app-bg);
+  color: var(--app-fg);
+}
+
+.header-container {
+  background-color: var(--header-bg);
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 100%;
+}
+
+.header-text {
+  text-align: center;
+}
+
+/* Form styling */
+.fullwidth-form {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  height: 28px;
+}
+
+.form-button {
+  /* Remove default styling */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  margin-top: 10px;
+  width: calc(100% - 20px);
+  height: 28px !important;
+
+  background-color: var(--button-bg);
+  color: var(--app-fg);
+}
+
+.form-button:active {
+  filter: brightness(85%);
+}

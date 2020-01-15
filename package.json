@@ -1,0 +1,19 @@
+{
+  "name": "mammoth-app",
+  "version": "1.0.0",
+  "description": "Mastadon app written in Electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.9"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mastodon-api": "^1.3.0"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+  <title>Mammoth</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header-container">
+    <h3 class="header-text">Login to an Instance</h3>
+  </div>
+
+  <!-- Login form -->
+  <form class="fullwidth-form">
+    <input class="form-input" type="url" id="instanceUrl" placeholder="https://mastodon.social/auth/sign_in">
+    <input class="form-button" type="button" id="login" value="Login">
+  </form>
+
+  <script>
+    const { remote } = require('electron')
+
+    let loginButton = document.querySelector('#login')
+    let instanceUrl = document.querySelector('#instanceUrl')
+
+    // Set the placeholder URL as the value
+    instanceUrl.value = instanceUrl.placeholder
+
+    loginButton.addEventListener('click', function() {
+      // Redirect to the instance URL for handling authentication
+      remote.getCurrentWindow().loadURL(instanceUrl.value)
+    })
+  </script>
+</body>
+
+</html>

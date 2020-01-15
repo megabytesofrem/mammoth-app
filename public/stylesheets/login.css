@@ -1,0 +1,15 @@
+@import 'styles.css';
+
+.form-input, #instanceUrl {
+  /* We can't use :before on an input sadly */
+  background-image: url('../mastodon-logo.png');
+  background-position: left;
+  background-size: 16px auto;
+  background-repeat: no-repeat;
+
+  padding-left: 20px;
+
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  height: 28px;
+}
