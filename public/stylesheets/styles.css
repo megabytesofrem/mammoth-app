@@ -2,10 +2,11 @@
 @import 'login.css';
 
 :root {
-  --header-bg: #202f42;
-  --app-bg: #354d6d;
-  --app-fg: #ffffff;
-  --button-bg: #4f74a3;
+  --header-bg: #3f75bd;
+  --app-bg: #ffffff;
+  --app-fg: #333333;
+  --app-fg2: #ffffff;
+  --app-primary: #3f75bd;
 }
 
 * {
@@ -20,27 +21,44 @@ body {
   color: var(--app-fg);
 }
 
-.header-container {
-  background-color: var(--header-bg);
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  width: 100%;
+.sidebar-container {
+  float: left;
+  background-color: var(--app-primary);
+  color: #ffffff;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
 }
 
-.header-text {
-  text-align: center;
+.sidebar-container > li {
+  float: left;
+  display: block;
 }
 
 /* Form styling */
 .fullwidth-form {
   width: 100%;
-  padding: 10px;
+  display: flex;
+
+  margin: none;
+  flex-direction: column;
+}
+
+.form-container {
+  padding-top: 100px;
 }
 
 .form-input {
+  /* Remove default styling */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+
+  box-shadow: none;
   box-sizing: border-box;
-  width: calc(100% - 20px);
+  border: 1px var(--app-primary) solid;
+  border-radius: 8px;
   height: 28px;
 }
 
@@ -50,12 +68,12 @@ body {
   -webkit-appearance: none;
   appearance: none;
 
-  margin-top: 10px;
-  width: calc(100% - 20px);
-  height: 28px !important;
+  margin: 8px 32px;
+  border-radius: 8px;
+  height: 34px !important;
 
-  background-color: var(--button-bg);
-  color: var(--app-fg);
+  background-color: var(--app-primary);
+  color: var(--app-fg2);
 }
 
 .form-button:active {
