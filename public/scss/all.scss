@@ -1,0 +1,28 @@
+@import '_variables.scss';
+@import '_login.scss';
+@import '_home.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+// Remove default margin and padding from all elements
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: $app-background;
+  color: $app-foreground;
+}
+
+
+a {
+  // Remove default tag styling
+  color: $color-white;
+  text-decoration: none;
+
+  &:active, &:focus, &:link, &:visited {
+    color: $color-white;
+  }
+}

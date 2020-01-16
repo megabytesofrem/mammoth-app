@@ -1,0 +1,53 @@
+@import '_mixins.scss';
+
+.login-form-container {
+  padding-top: 100px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: none;
+
+  >.form-input {
+    @include remove-default-style;
+    outline: none;
+
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 1px $app-primary solid;
+    border-radius: 8px;
+    height: 28px;
+  }
+
+  >.form-button {
+    @include remove-default-style;
+    margin: 8px 32px;
+    border-radius: 8px;
+    height: 34px !important; /* Dont want this changed */
+    
+    background-color: $app-primary;
+    color: $color-white;
+
+    &:hover, &:active {
+      cursor: pointer;
+      filter: brightness(85%);
+    }
+  }
+
+  >.instance-input {
+    // We can't use :before on an input sadly
+    background-image: url('../mastodon-logo.png');
+    background-position: left;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+
+    // Pad the icon to the left
+    padding-left: 20px;
+    
+    box-sizing: border-box;
+    margin: 0px 32px; /* V, H margin */
+    height: 28;
+  }
+}

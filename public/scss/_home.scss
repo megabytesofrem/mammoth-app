@@ -1,0 +1,16 @@
+.sidebar-left {
+  float: left;
+  background-color: $app-primary;
+  color: $color-white;
+  
+  // Make the sidebar fill the height
+  height: 100%;
+  padding: 10px;
+
+  text-align: center;
+
+  > li {
+    float: left;
+    display: block;
+  }
+}

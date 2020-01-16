@@ -3,34 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/all.css">
   <title>Login to an Instance</title>
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 </head>
 
 <body>
   <!-- Login form -->
-  <div class="form-container">
-    <form class="fullwidth-form">
-      <input class="form-input" type="url" id="instanceUrl" placeholder="https://mastodon.social/auth/sign_in">
+  <div class="login-form-container">
+    <form class="login-form">
+      <input class="form-input instance-input" type="url" id="instanceUrl" placeholder="https://mastodon.social/api/v1/apps">
       <input class="form-button" type="button" id="login" value="Login">
     </form>
   </div>
 
-  <script>
-    const { remote } = require('electron')
-
-    let loginButton = document.querySelector('#login')
-    let instanceUrl = document.querySelector('#instanceUrl')
-
-    // Set the placeholder URL as the value
-    instanceUrl.value = instanceUrl.placeholder
-
-    loginButton.addEventListener('click', function() {
-      // Redirect to the instance URL for handling authentication
-      remote.getCurrentWindow().loadURL(instanceUrl.value)
-    })
-  </script>
+  <script type="script/javascript" src="/scripts/login.js"></script>
 </body>
 
 </html>

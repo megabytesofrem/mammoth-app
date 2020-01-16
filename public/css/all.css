@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+.login-form-container {
+  padding-top: 100px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: none;
+}
+.login-form > .form-input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px #4784d3 solid;
+  border-radius: 8px;
+  height: 28px;
+}
+.login-form > .form-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 8px 32px;
+  border-radius: 8px;
+  height: 34px !important;
+  /* Dont want this changed */
+  background-color: #4784d3;
+  color: #ffffff;
+}
+.login-form > .form-button:hover, .login-form > .form-button:active {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+.login-form > .instance-input {
+  background-image: url("../mastodon-logo.png");
+  background-position: left;
+  background-size: 16px auto;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  box-sizing: border-box;
+  margin: 0px 32px;
+  /* V, H margin */
+  height: 28;
+}
+
+.sidebar-left {
+  float: left;
+  background-color: #4784d3;
+  color: #ffffff;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.sidebar-left > li {
+  float: left;
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:active, a:focus, a:link, a:visited {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=all.css.map */
